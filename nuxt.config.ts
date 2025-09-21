@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     '@vite-pwa/nuxt',
+      '@nuxtjs/supabase',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error
@@ -16,6 +17,17 @@ export default defineNuxtConfig({
       })
     }
   ],
+    supabase: {
+      url: process.env.SUPABASE_URL,
+        key: process.env.SUPABASE_KEY,
+        redirectOptions: {
+            login: '/auth/login',
+            callback: '/confirm',
+            include: undefined,
+            exclude: [],
+            saveRedirectToCookie: false,
+        }
+    },
 
   pwa: {
     registerType: 'autoUpdate',
