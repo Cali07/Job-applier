@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+/* Main for app*/
+:root{
+    --main-blue: #1B5E97;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+/* LOGIN PAGE*/
+.banner {
+    height: 100vh;
+    object-fit: cover;
+}
+
+#logobanner .v-img__img--contain {
+    object-fit: unset !important;
+}
+
+.btn-blue{
+    background-color: var(--main-blue) !important;
+    color: white !important;
+}
+
+
+/* DASHBOARD */
+.text-blue-c {
+    color: #125792 !important;
+}
